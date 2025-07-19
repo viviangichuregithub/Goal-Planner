@@ -1,0 +1,31 @@
+{
+  "goals": [
+    {
+      "id": "1",
+      "name": "Travel Fund - Japan",
+      "targetAmount": 5000,
+      "savedAmount": 3200,
+      "category": "Travel",
+      "deadline": "2025-12-31",
+      "createdAt": "2024-01-15"
+    },
+    {
+      "id": "f0ae3bfb-3c4d-425f-97f1-54e338e6355b",
+      "name": "Buy a new laptop",
+      "targetAmount": "70000",
+      "category": "general",
+      "deadline": "2025-07-07",
+      "savedAmount": 0,
+      "createdAt": "2025-07-19"
+    },
+    {
+      "id": "4d1fef6e-a58f-4be9-98af-77540b0b4b1c",
+      "name": "Family Vacation",
+      "targetAmount": 200000,
+      "savedAmount": 15000,
+      "category": "Travel",
+      "deadline": "2025-08-09",
+      "createdAt": "2025-07-19"
+    }
+  ]
+}
