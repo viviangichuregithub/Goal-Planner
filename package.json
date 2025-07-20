@@ -3,16 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run frontend\" \"npm run json-server\"",
-    "frontend": "next dev",
-    "json-server": "json-server --watch db.json --port $PORT",
+    "dev": "next dev --turbopack",
+    "json-server": "json-server --watch db.json --port 3001",
     "build": "next build",
-    "start": "concurrently \"npm run start:frontend\" \"npm run json-server\"",
-    "start:frontend": "next start",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "concurrently": "^8.2.2",
     "lucide-react": "^0.525.0",
     "next": "15.4.2",
     "react": "19.1.0",
