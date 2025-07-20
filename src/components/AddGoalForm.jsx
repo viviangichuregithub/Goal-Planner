@@ -29,7 +29,7 @@ export default function AddGoalForm({ onAddGoal }) {
       createdAt: new Date().toISOString().split("T")[0],
     };
 
-    fetch("https://goal-tracker-ts2n.onrender.com/goals", {
+    fetch("http://localhost:3001/goals", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newGoal),

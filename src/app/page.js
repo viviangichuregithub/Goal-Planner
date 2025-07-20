@@ -9,7 +9,7 @@ export default function Home() {
 
   // Load goals from server
   useEffect(() => {
-    fetch("https://goal-tracker-ts2n.onrender.com/goals")
+    fetch("http://localhost:3001/goals")
       .then((res) => res.json())
       .then((data) => setGoals(data))
       .catch((err) => {
@@ -20,7 +20,7 @@ export default function Home() {
 
   // Delete goal
   const handleDelete = (goalId) => {
-    fetch(`https://goal-tracker-ts2n.onrender.com/goals/${goalId}`, {
+    fetch(`http://localhost:3001/goals/${goalId}`, {
       method: "DELETE",
     })
       .then(() => {
@@ -35,7 +35,7 @@ export default function Home() {
 
   // Update goal
   const handleUpdate = (goalId, updatedFields) => {
-    fetch(`https://goal-tracker-ts2n.onrender.com/goals/${goalId}`, {
+    fetch(`http://localhost:3001/goals/${goalId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

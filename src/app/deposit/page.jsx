@@ -19,7 +19,7 @@ export default function DepositPage() {
 
     const updatedAmount = goalToUpdate.savedAmount + amount;
 
-    fetch(`https://goal-tracker-ts2n.onrender.com/goals/${goalId}`, {
+    fetch(`http://localhost:3001/goals/${goalId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
