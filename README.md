@@ -20,11 +20,13 @@ A personal goal-tracking web application that allows users to set financial goal
 - **Render** (for deployment)
 
 ## Pages Overview
-1. Home (/)
+**1. Home (/)**
+
 Displays a welcome or landing screen.
 May include navigation links to other pages like Goals, Add Goal, or Overview.
 
-2. Overview (/overview)
+**2. Overview (/overview)**
+
 Summarizes your goals at a glance.
 Key metrics:
 - Total number of goals
@@ -33,7 +35,8 @@ Key metrics:
 - Warnings for upcoming deadlines
 - Overdue goals
 
-3. Goals List (/goals)
+**3. Goals List (/goals)**
+
 Displays a table or list of all created financial goals.
 Includes details such as:
 - Goal name
@@ -42,7 +45,8 @@ Includes details such as:
 - Category
 - Deadline
 
-4. Add Goal (/goals/add)
+**4. Add Goal (/goals/add)**
+
 A form for creating a new goal.
 Fields include:
 - Name
@@ -52,20 +56,21 @@ Fields include:
 - Deadline
 - Submits data to a JSON server.
 
-5. Deposit Form (/deposit)
+**5. Deposit Form (/deposit)**
+
 - Allows users to deposit money towards a specific goal.
 - Select a goal and enter deposit amount.
 - Validates input and updates saved amount.
 - Shows a success message on completion.
 
-6. Navbar / Layout
+**6. Navbar**
 - Persistent navigation UI across the app.
 - Lets users easily switch between Overview, Goals, and Add pages.
 
 ## License
 
 ## Author
-Vivian Gichure
+**Vivian Gichure**
 - Frontend Developer |  Full-stack Mobile Developer
 - Kenya
 - Email me on vivangichure@gmail.com
