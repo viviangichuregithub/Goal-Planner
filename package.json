@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "concurrently \"npm run frontend\" \"npm run json-server\"",
+    "frontend": "next dev",
     "json-server": "json-server --watch db.json --port 10000",
     "build": "next build",
-    "start": "next start",
+    "start": "concurrently \"npm run start:frontend\" \"npm run json-server\"",
+    "start:frontend": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -15,7 +17,8 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hot-toast": "^2.5.2",
-    "recharts": "^3.1.0"
+    "recharts": "^3.1.0",
+    "concurrently": "^8.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
