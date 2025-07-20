@@ -88,14 +88,6 @@ npm run dev
 The frontend will be available at:
 👉 http://localhost:3000
 
-## Live Demo
-**THE FRONTEND is deployed on render**
-
-If you'd like to see the app in action, click the link below:
-
-👉 [https://goal-tracker-ts2n.onrender.com](https://goal-tracker-ts2n.onrender.com)
-
-
 ## License
 
 Copyright (c) 2025 viviangichuregithub
