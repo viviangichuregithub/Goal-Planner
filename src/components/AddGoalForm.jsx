@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 export default function AddGoalForm({ onAddGoal }) {
   const [formData, setFormData] = useState({
@@ -33,8 +34,12 @@ export default function AddGoalForm({ onAddGoal }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newGoal),
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to add goal");
+        return res.json();
+      })
       .then((data) => {
+        toast.success(" Goal added!");
         onAddGoal(data);
         setFormData({
           name: "",
@@ -44,86 +49,44 @@ export default function AddGoalForm({ onAddGoal }) {
           deadline: "",
         });
       })
-      .catch((err) => console.error("Error adding goal:", err));
+      .catch((err) => {
+        console.error("Error adding goal:", err);
+        toast.error(" Failed to add goal.");
+      });
   }
 
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white p-6 rounded-lg shadow mb-8 space-y-5"
+      className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg border border-gray-200 max-w-xl mx-auto space-y-6"
     >
-      <h2 className="text-2xl font-bold text-gray-800">Add New Goal</h2>
+      <h2 className="text-2xl font-semibold text-gray-800 mb-2">Add New Goal</h2>
 
-      { /* Goal Name */}
-      <div>
-        <label className="block mb-1 text-gray-700">Goal Name</label>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full border border-gray-300 p-2 rounded"
-          required
-        />
-      </div>
+      {[
+        { label: "Goal Name", name: "name", type: "text", required: true },
+        { label: "Target Amount", name: "targetAmount", type: "number", required: true },
+        { label: "Saved Amount", name: "savedAmount", type: "number", required: false },
+        { label: "Category", name: "category", type: "text", required: true },
+        { label: "Deadline", name: "deadline", type: "date", required: true },
+      ].map(({ label, name, type, required }) => (
+        <div key={name}>
+          <label className="block mb-1 text-sm font-medium text-gray-700">{label}</label>
+          <input
+            type={type}
+            name={name}
+            value={formData[name]}
+            onChange={handleChange}
+            required={required}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-400 focus:outline-none transition"
+          />
+        </div>
+      ))}
 
-      {/* Target Amount */}
-      <div>
-        <label className="block mb-1 text-gray-700">Target Amount</label>
-        <input
-          type="number"
-          name="targetAmount"
-          value={formData.targetAmount}
-          onChange={handleChange}
-          className="w-full border border-gray-300 p-2 rounded"
-          required
-        />
-      </div>
-
-      {/* Saved Amount */}
-      <div>
-        <label className="block mb-1 text-gray-700">Saved Amount</label>
-        <input
-          type="number"
-          name="savedAmount"
-          value={formData.savedAmount}
-          onChange={handleChange}
-          className="w-full border border-gray-300 p-2 rounded"
-        />
-      </div>
-
-      {/* Category */}
-      <div>
-        <label className="block mb-1 text-gray-700">Category</label>
-        <input
-          type="text"
-          name="category"
-          value={formData.category}
-          onChange={handleChange}
-          className="w-full border border-gray-300 p-2 rounded"
-          required
-        />
-      </div>
-
-      {/* Deadline */}
-      <div>
-        <label className="block mb-1 text-gray-700">Deadline</label>
-        <input
-          type="date"
-          name="deadline"
-          value={formData.deadline}
-          onChange={handleChange}
-          className="w-full border border-gray-300 p-2 rounded"
-          required
-        />
-      </div>
-
-      {/* Submit Button */}
       <button
         type="submit"
-        className="bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700 transition"
+        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-lg shadow-md transition-all"
       >
-        Add Goal
+         Add Goal
       </button>
     </form>
   );

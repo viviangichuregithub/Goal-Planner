@@ -1,31 +1,67 @@
 {
   "goals": [
     {
-      "id": "1",
-      "name": "Travel Fund - Japan",
-      "targetAmount": 5000,
-      "savedAmount": 3200,
-      "category": "Travel",
-      "deadline": "2025-12-31",
-      "createdAt": "2024-01-15"
-    },
-    {
       "id": "f0ae3bfb-3c4d-425f-97f1-54e338e6355b",
       "name": "Buy a new laptop",
-      "targetAmount": "70000",
+      "targetAmount": "90000",
       "category": "general",
       "deadline": "2025-07-07",
-      "savedAmount": 0,
+      "savedAmount": 50000,
       "createdAt": "2025-07-19"
     },
     {
-      "id": "4d1fef6e-a58f-4be9-98af-77540b0b4b1c",
-      "name": "Family Vacation",
+      "id": "7557d25a-e34d-4648-ad71-6562d64547ae",
+      "name": "Malindi Vacation",
       "targetAmount": 200000,
-      "savedAmount": 15000,
+      "savedAmount": 14000,
       "category": "Travel",
+      "deadline": "2025-09-30",
+      "createdAt": "2025-07-20"
+    },
+    {
+      "id": "5f0727c5-8986-40e4-95cf-eb8fdef71d95",
+      "name": "Black tax",
+      "targetAmount": "30000",
+      "savedAmount": 30000,
+      "category": "Family",
       "deadline": "2025-08-09",
-      "createdAt": "2025-07-19"
+      "createdAt": "2025-07-20"
+    },
+    {
+      "id": "5dd4e3c8-54ac-499c-bf36-da53667ccb06",
+      "name": "Samsung Flip 3 Phone ",
+      "targetAmount": 180000,
+      "savedAmount": 30000,
+      "category": "general",
+      "deadline": "2025-07-19",
+      "createdAt": "2025-07-20"
+    },
+    {
+      "id": "a1070c65-ddfb-4688-bb06-d887690af0c5",
+      "name": "School Fees",
+      "targetAmount": 24000,
+      "savedAmount": 3000,
+      "category": "Family",
+      "deadline": "2025-10-04",
+      "createdAt": "2025-07-20"
+    },
+    {
+      "id": "8cd5df47-b63f-4adf-9df2-8c150a112d17",
+      "name": "Girls Day Out",
+      "targetAmount": 3000,
+      "savedAmount": 1000,
+      "category": "fun",
+      "deadline": "2025-08-30",
+      "createdAt": "2025-07-20"
+    },
+    {
+      "id": "1574f225-6ede-475b-ba57-aac6e466749a",
+      "name": "Rent",
+      "targetAmount": 15000,
+      "savedAmount": 1350,
+      "category": "general",
+      "deadline": "2025-07-24",
+      "createdAt": "2025-07-20"
     }
   ]
 }

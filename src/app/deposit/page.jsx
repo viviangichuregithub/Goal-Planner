@@ -28,16 +28,21 @@ export default function DepositPage() {
     })
       .then((res) => res.json())
       .then((updatedGoal) => {
-        setGoals((prev) =>
-          prev.map((g) => (g.id === goalId ? updatedGoal : g))
+        setGoals((prevGoals) =>
+          prevGoals.map((g) => (g.id === goalId ? updatedGoal : g))
         );
       });
   };
 
   return (
-    <div className="max-w-2xl mx-auto mt-10 px-4">
-      <h2 className="text-2xl font-bold mb-4 text-orange text-center">Make a Deposit</h2>
-      <DepositForm goals={goals} onDeposit={handleDeposit} />
-    </div>
+    <main className="min-h-screen bg-gradient-to-br from-gray-100 to-white p-6">
+      <div className="max-w-2xl mx-auto bg-white rounded-xl shadow-lg p-6">
+        <h1 className="text-3xl font-bold text-blue-700 mb-6 text-center">
+          Make a Deposit
+        </h1>
+
+        <DepositForm goals={goals} onDeposit={handleDeposit} />
+      </div>
+    </main>
   );
 }

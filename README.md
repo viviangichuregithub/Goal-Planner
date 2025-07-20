@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Goal Tracker App
 
-## Getting Started
+A personal goal-tracking web application that allows users to set financial goals, deposit savings, and track progress over time.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Add new savings goals
+- Deposit towards existing goals
+- Overview dashboard with total savings, completed goals, warnings, and overdue goals
+- Real-time updates with user-friendly UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** (App Router)
+- **React**
+- **Tailwind CSS**
+- **JSON Server** (Mock API)
+- **React Hot Toast** (for alerts)
+- **Render** (for deployment)
 
-## Learn More
+## Pages Overview
+1. Home (/)
+Displays a welcome or landing screen.
+May include navigation links to other pages like Goals, Add Goal, or Overview.
 
-To learn more about Next.js, take a look at the following resources:
+2. Overview (/overview)
+Summarizes your goals at a glance.
+Key metrics:
+- Total number of goals
+- Total amount saved
+- Number of completed goals
+- Warnings for upcoming deadlines
+- Overdue goals
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Goals List (/goals)
+Displays a table or list of all created financial goals.
+Includes details such as:
+- Goal name
+- Target amount
+- Saved amount
+- Category
+- Deadline
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Add Goal (/goals/add)
+A form for creating a new goal.
+Fields include:
+- Name
+- Target amount
+- Initial saved amount
+- Category
+- Deadline
+- Submits data to a JSON server.
 
-## Deploy on Vercel
+5. Deposit Form (/deposit)
+- Allows users to deposit money towards a specific goal.
+- Select a goal and enter deposit amount.
+- Validates input and updates saved amount.
+- Shows a success message on completion.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+6. Navbar / Layout
+- Persistent navigation UI across the app.
+- Lets users easily switch between Overview, Goals, and Add pages.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+## Author
+Vivian Gichure
+- Frontend Developer |  Full-stack Mobile Developer
+- Kenya
+- Email me on vivangichure@gmail.com
