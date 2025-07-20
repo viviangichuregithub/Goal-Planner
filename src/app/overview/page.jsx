@@ -7,7 +7,7 @@ export default function OverviewPage() {
   const [goals, setGoals] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/goals")
+    fetch("https://goal-tracker-ts2n.onrender.com/goals")
       .then((res) => res.json())
       .then((data) => setGoals(data))
       .catch((err) => console.error("Failed to fetch goals:", err));
