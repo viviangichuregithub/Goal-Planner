@@ -69,6 +69,8 @@ Fields include:
 
 ## License
 
+Copyright (c) 2025 viviangichuregithub
+
 ## Author
 **Vivian Gichure**
 - Frontend Developer |  Full-stack Mobile Developer
