@@ -88,6 +88,10 @@ npm run dev
 The frontend will be available at:
 👉 http://localhost:3000
 
+or 
+
+u can click this link : https://goal-tracker-ts2n.onrender.com/
+
 ## License
 
 Copyright (c) 2025 viviangichuregithub
