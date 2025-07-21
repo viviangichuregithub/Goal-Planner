@@ -3,24 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
+    "json-server": "json-server --watch db.json --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "json-server": "json-server --watch db.json --port 3001"
+    "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.525.0",
     "next": "15.4.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "react-hot-toast": "^2.5.2"
+    "react-hot-toast": "^2.5.2",
+    "recharts": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.4.2",
-    "json-server": "^1.0.0-beta.3",
     "tailwindcss": "^4"
   }
 }
