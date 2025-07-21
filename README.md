@@ -67,6 +67,31 @@ Fields include:
 - Persistent navigation UI across the app.
 - Lets users easily switch between Overview, Goals, and Add pages.
 
+## How to Run Locally
+
+**1. Install dependencies**
+```
+npm install
+```
+
+**2. Start the backend (JSON Server)**
+```
+npx json-server --watch db.json --port 3001
+```
+The mock API will be available at:
+👉 http://localhost:3001/goals
+
+**3. Start the frontend (Next.js app)**
+```
+npm run dev
+```
+The frontend will be available at:
+👉 http://localhost:3000
+
+or 
+
+u can click this link : https://goal-tracker-ts2n.onrender.com/
+
 ## License
 
 Copyright (c) 2025 viviangichuregithub
