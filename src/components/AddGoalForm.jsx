@@ -29,7 +29,7 @@ export default function AddGoalForm({ onAddGoal }) {
       createdAt: new Date().toISOString().split("T")[0],
     };
 
-    fetch("http://localhost:3001/goals", {
+    fetch("https://goal-planner-api-5e2w.onrender.com/goals", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newGoal),

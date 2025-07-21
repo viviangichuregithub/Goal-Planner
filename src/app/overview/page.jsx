@@ -7,7 +7,7 @@ export default function OverviewPage() {
   const [goals, setGoals] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/goals")
+    fetch("https://goal-planner-api-5e2w.onrender.com/goals")
       .then((res) => res.json())
       .then((data) => setGoals(data))
       .catch((err) => console.error("Failed to fetch goals:", err));

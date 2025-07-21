@@ -7,7 +7,7 @@ export default function DepositPage() {
   const [goals, setGoals] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3001/goals")
+    fetch("https://goal-planner-api-5e2w.onrender.com/goals")
       .then((res) => res.json())
       .then((data) => setGoals(data))
       .catch((err) => console.error("Error loading goals:", err));
@@ -19,7 +19,7 @@ export default function DepositPage() {
 
     const updatedAmount = goalToUpdate.savedAmount + amount;
 
-    fetch(`http://localhost:3001/goals/${goalId}`, {
+    fetch(`https://goal-planner-api-5e2w.onrender.com/goals/${goalId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
