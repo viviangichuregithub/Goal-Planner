@@ -17,25 +17,11 @@ A personal goal-tracking web application that allows users to set financial goal
 - **Tailwind CSS**
 - **JSON Server** (Mock API)
 - **React Hot Toast** (for alerts)
-- **Render** (for deployment)
+- **Render** (backend deployment) - https://goal-planner-api-5e2w.onrender.com/goals
+- **vercel** (frontend deployment)- https://goal-planner-nu.vercel.app/
 
 ## Pages Overview
-**1. Home (/)**
-
-Displays a welcome or landing screen.
-May include navigation links to other pages like Goals, Add Goal, or Overview.
-
-**2. Overview (/overview)**
-
-Summarizes your goals at a glance.
-Key metrics:
-- Total number of goals
-- Total amount saved
-- Number of completed goals
-- Warnings for upcoming deadlines
-- Overdue goals
-
-**3. Goals List (/goals)**
+**1. Home (/)Goals List (/goals)**
 
 Displays a table or list of all created financial goals.
 Includes details such as:
@@ -45,7 +31,14 @@ Includes details such as:
 - Category
 - Deadline
 
-**4. Add Goal (/goals/add)**
+**2. Deposit Form (/deposit)**
+
+- Allows users to deposit money towards a specific goal.
+- Select a goal and enter deposit amount.
+- Validates input and updates saved amount.
+- Shows a success message on completion.
+
+**3. Add Goal (/goals/add)**
 
 A form for creating a new goal.
 Fields include:
@@ -56,41 +49,24 @@ Fields include:
 - Deadline
 - Submits data to a JSON server.
 
-**5. Deposit Form (/deposit)**
+**4. Overview (/overview)**
 
-- Allows users to deposit money towards a specific goal.
-- Select a goal and enter deposit amount.
-- Validates input and updates saved amount.
-- Shows a success message on completion.
+Summarizes your goals at a glance.
+Key metrics:
+- Total number of goals
+- Total amount saved
+- Number of completed goals
+- Warnings for upcoming deadlines
+- Overdue goals
 
-**6. Navbar**
+**5. Navbar**
 - Persistent navigation UI across the app.
 - Lets users easily switch between Overview, Goals, and Add pages.
 
-## How to Run Locally
+## Live Demo App
+Click the link to view the App
 
-**1. Install dependencies**
-```
-npm install
-```
-
-**2. Start the backend (JSON Server)**
-```
-npx json-server --watch db.json --port 3001
-```
-The mock API will be available at:
-👉 http://localhost:3001/goals
-
-**3. Start the frontend (Next.js app)**
-```
-npm run dev
-```
-The frontend will be available at:
-👉 http://localhost:3000
-
-or 
-
-u can click this link : https://goal-tracker-ts2n.onrender.com/
+https://goal-planner-nu.vercel.app/
 
 ## License
 
