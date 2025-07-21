@@ -3,7 +3,7 @@
     {
       "id": "f0ae3bfb-3c4d-425f-97f1-54e338e6355b",
       "name": "Buy a new laptop",
-      "targetAmount": "90000",
+      "targetAmount": "70000",
       "category": "general",
       "deadline": "2025-07-07",
       "savedAmount": 50000,
@@ -58,9 +58,18 @@
       "id": "1574f225-6ede-475b-ba57-aac6e466749a",
       "name": "Rent",
       "targetAmount": 15000,
-      "savedAmount": 1350,
+      "savedAmount": 2350,
       "category": "general",
       "deadline": "2025-07-24",
+      "createdAt": "2025-07-20"
+    },
+    {
+      "id": "6d701958-f75c-4d9e-a1df-8b813ea734fb",
+      "name": "Electricity Bill",
+      "targetAmount": 6000,
+      "savedAmount": 795,
+      "category": "Bills",
+      "deadline": "2025-08-09",
       "createdAt": "2025-07-20"
     }
   ]
