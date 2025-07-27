@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import AddGoalForm from "@/components/AddGoalForm";
+import AddGoalForm from "../../components/AddGoalForm";
 
 export default function AddGoalPage() {
   const [newGoal, setNewGoal] = useState(null);
