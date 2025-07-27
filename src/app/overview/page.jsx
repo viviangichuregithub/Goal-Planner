@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Overview from "@/components/Overview";
+import Overview from "../../components/Overview";
 
 export default function OverviewPage() {
   const [goals, setGoals] = useState([]);
