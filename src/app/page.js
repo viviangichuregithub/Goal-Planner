@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import GoalList from "@/components/GoalList";
+import GoalList from "../components/GoalList";
 import toast from "react-hot-toast"; 
 
 export default function Home() {
