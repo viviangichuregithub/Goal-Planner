@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import DepositForm from "@/components/DepositForm";
+import DepositForm from "../../components/DepositForm";
 
 export default function DepositPage() {
   const [goals, setGoals] = useState([]);
